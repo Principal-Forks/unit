@@ -1,0 +1,114 @@
+version: '1.0.0'
+name: 'Unit Visual Programming System'
+
+nodeComponents:
+  # Core Computational Units
+  Unit:
+    description: 'Base computational unit with inputs/outputs (MIMO Finite State Machine)'
+    icon: '⚡'
+    color: '#FF6B6B'
+
+  Graph:
+    description: 'Container for composing units into visual programs'
+    icon: '🔗'
+    color: '#4ECDC4'
+
+  Component:
+    description: 'Visual UI component with layout and composition capabilities'
+    icon: '🎨'
+    color: '#45B7D1'
+
+  Functional:
+    description: 'Pure functional computation unit'
+    icon: 'λ'
+    color: '#96CEB4'
+
+  Primitive:
+    description: 'Base primitive operation'
+    icon: '🔧'
+    color: '#FFEAA7'
+
+  # System Primitives
+  ControlFlow:
+    description: 'If, Loop, Iterate, Wait operations'
+    icon: '🎮'
+    color: '#DDA0DD'
+
+  DataOperations:
+    description: 'Array, Object, String manipulation'
+    icon: '📊'
+    color: '#98D8C8'
+
+  Arithmetic:
+    description: 'Mathematical operations and calculations'
+    icon: '➕'
+    color: '#FFB6C1'
+
+  WebAPIs:
+    description: 'Browser and web platform APIs'
+    icon: '🌐'
+    color: '#87CEEB'
+
+  SystemAPIs:
+    description: 'File system, network, system operations'
+    icon: '⚙️'
+    color: '#F0E68C'
+
+  Registry:
+    description: 'Unit specification and class management'
+    icon: '📋'
+    color: '#D3D3D3'
+
+  BootSystem:
+    description: 'System initialization and lifecycle management'
+    icon: '🚀'
+    color: '#FF69B4'
+
+edgeComponents:
+  # Data Flow Connections
+  DataFlow:
+    description: 'Reactive data flow between units'
+    color: '#FF6B6B'
+    style: 'solid'
+
+  Merge:
+    description: 'Data merging and combination point'
+    color: '#4ECDC4'
+    style: 'solid'
+
+  PinConnection:
+    description: 'Direct unit-to-unit connection'
+    color: '#45B7D1'
+    style: 'dashed'
+
+  # Component Relationships
+  ComponentHierarchy:
+    description: 'Parent-child component relationships'
+    color: '#96CEB4'
+    style: 'solid'
+
+  Layout:
+    description: 'Component positioning and sizing'
+    color: '#FFEAA7'
+    style: 'dotted'
+
+  # System Relationships
+  GraphComposition:
+    description: 'Graph-to-graph composition'
+    color: '#DDA0DD'
+    style: 'solid'
+
+  UnitInstantiation:
+    description: 'Creating unit instances from specs'
+    color: '#98D8C8'
+    style: 'solid'
+
+  Inheritance:
+    description: 'Class inheritance relationships'
+    color: '#FFB6C1'
+    style: 'double'
+
+  PlatformImplementation:
+    description: 'Platform-specific implementation'
+    color: '#87CEEB'
+    style: 'solid'

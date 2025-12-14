@@ -1,0 +1,372 @@
+{
+  "nodes": [
+    {
+      "id": "unit-base",
+      "type": "text",
+      "x": 810,
+      "y": 260,
+      "width": 180,
+      "height": 80,
+      "text": "Unit Base Class\nMIMO Finite State Machine",
+      "pv": {
+        "nodeType": "Unit",
+        "shape": "rectangle",
+        "fill": "#FF6B6B",
+        "icon": "⚡"
+      }
+    },
+    {
+      "id": "graph-container",
+      "type": "text",
+      "x": 470,
+      "y": 460,
+      "width": 160,
+      "height": 80,
+      "text": "Graph Container\nComposes units into programs",
+      "pv": {
+        "nodeType": "Graph",
+        "shape": "rectangle",
+        "fill": "#4ECDC4",
+        "icon": "🔗"
+      }
+    },
+    {
+      "id": "component-base",
+      "type": "text",
+      "x": 720,
+      "y": 660,
+      "width": 160,
+      "height": 80,
+      "text": "Component Base\nVisual UI components",
+      "pv": {
+        "nodeType": "Component",
+        "shape": "rectangle",
+        "fill": "#45B7D1",
+        "icon": "🎨"
+      }
+    },
+    {
+      "id": "functional-unit",
+      "type": "text",
+      "x": 770,
+      "y": 460,
+      "width": 160,
+      "height": 80,
+      "text": "Functional Units\nPure computation",
+      "pv": {
+        "nodeType": "Functional",
+        "shape": "rectangle",
+        "fill": "#96CEB4",
+        "icon": "λ"
+      }
+    },
+    {
+      "id": "primitives",
+      "type": "text",
+      "x": 80,
+      "y": 460,
+      "width": 140,
+      "height": 80,
+      "text": "System Primitives\nBuilt-in operations",
+      "pv": {
+        "nodeType": "Primitive",
+        "shape": "rectangle",
+        "fill": "#FFEAA7",
+        "icon": "🔧"
+      }
+    },
+    {
+      "id": "registry",
+      "type": "text",
+      "x": 30,
+      "y": 260,
+      "width": 140,
+      "height": 80,
+      "text": "Unit Registry\nSpecification management",
+      "pv": {
+        "nodeType": "Registry",
+        "shape": "rectangle",
+        "fill": "#D3D3D3",
+        "icon": "📋"
+      }
+    },
+    {
+      "id": "boot-system",
+      "type": "text",
+      "x": 430,
+      "y": 60,
+      "width": 140,
+      "height": 80,
+      "text": "Boot System\nInitialization & lifecycle",
+      "pv": {
+        "nodeType": "BootSystem",
+        "shape": "rectangle",
+        "fill": "#FF69B4",
+        "icon": "🚀"
+      }
+    },
+    {
+      "id": "control-flow",
+      "type": "text",
+      "x": 130,
+      "y": 660,
+      "width": 140,
+      "height": 80,
+      "text": "Control Flow\nIf, Loop, Wait",
+      "pv": {
+        "nodeType": "ControlFlow",
+        "shape": "rectangle",
+        "fill": "#DDA0DD",
+        "icon": "🎮"
+      }
+    },
+    {
+      "id": "data-ops",
+      "type": "text",
+      "x": 530,
+      "y": 660,
+      "width": 140,
+      "height": 80,
+      "text": "Data Operations\nArray, Object, String",
+      "pv": {
+        "nodeType": "DataOperations",
+        "shape": "rectangle",
+        "fill": "#98D8C8",
+        "icon": "📊"
+      }
+    },
+    {
+      "id": "arithmetic",
+      "type": "text",
+      "x": 330,
+      "y": 660,
+      "width": 140,
+      "height": 80,
+      "text": "Arithmetic\nMathematical operations",
+      "pv": {
+        "nodeType": "Arithmetic",
+        "shape": "rectangle",
+        "fill": "#FFB6C1",
+        "icon": "➕"
+      }
+    },
+    {
+      "id": "web-platform",
+      "type": "text",
+      "x": 230,
+      "y": 260,
+      "width": 140,
+      "height": 80,
+      "text": "Web Platform\nBrowser APIs",
+      "pv": {
+        "nodeType": "WebAPIs",
+        "shape": "rectangle",
+        "fill": "#87CEEB",
+        "icon": "🌐"
+      }
+    },
+    {
+      "id": "system-platform",
+      "type": "text",
+      "x": 430,
+      "y": 260,
+      "width": 140,
+      "height": 80,
+      "text": "System Platform\nFile system, network",
+      "pv": {
+        "nodeType": "SystemAPIs",
+        "shape": "rectangle",
+        "fill": "#F0E68C",
+        "icon": "⚙️"
+      }
+    },
+    {
+      "id": "editor",
+      "type": "text",
+      "x": 630,
+      "y": 260,
+      "width": 140,
+      "height": 80,
+      "text": "Visual Editor\nInteractive editing",
+      "pv": {
+        "nodeType": "Component",
+        "shape": "rectangle",
+        "fill": "#45B7D1",
+        "icon": "📝"
+      }
+    },
+    {
+      "id": "renderer",
+      "type": "text",
+      "x": 280,
+      "y": 460,
+      "width": 140,
+      "height": 80,
+      "text": "Graph Renderer\nVisual rendering",
+      "pv": {
+        "nodeType": "Component",
+        "shape": "rectangle",
+        "fill": "#45B7D1",
+        "icon": "🎨"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "unit-to-graph",
+      "fromNode": "unit-base",
+      "toNode": "graph-container",
+      "label": "composes",
+      "pv": {
+        "edgeType": "GraphComposition"
+      }
+    },
+    {
+      "id": "unit-to-component",
+      "fromNode": "unit-base",
+      "toNode": "component-base",
+      "label": "inherits",
+      "pv": {
+        "edgeType": "Inheritance"
+      }
+    },
+    {
+      "id": "unit-to-functional",
+      "fromNode": "unit-base",
+      "toNode": "functional-unit",
+      "label": "extends",
+      "pv": {
+        "edgeType": "Inheritance"
+      }
+    },
+    {
+      "id": "registry-to-primitives",
+      "fromNode": "registry",
+      "toNode": "primitives",
+      "label": "manages",
+      "pv": {
+        "edgeType": "DataFlow"
+      }
+    },
+    {
+      "id": "boot-to-registry",
+      "fromNode": "boot-system",
+      "toNode": "registry",
+      "label": "initializes",
+      "pv": {
+        "edgeType": "DataFlow"
+      }
+    },
+    {
+      "id": "primitives-to-control",
+      "fromNode": "primitives",
+      "toNode": "control-flow",
+      "label": "includes",
+      "pv": {
+        "edgeType": "DataFlow"
+      }
+    },
+    {
+      "id": "primitives-to-data",
+      "fromNode": "primitives",
+      "toNode": "data-ops",
+      "label": "includes",
+      "pv": {
+        "edgeType": "DataFlow"
+      }
+    },
+    {
+      "id": "primitives-to-arithmetic",
+      "fromNode": "primitives",
+      "toNode": "arithmetic",
+      "label": "includes",
+      "pv": {
+        "edgeType": "DataFlow"
+      }
+    },
+    {
+      "id": "web-to-primitives",
+      "fromNode": "web-platform",
+      "toNode": "primitives",
+      "label": "implements",
+      "pv": {
+        "edgeType": "PlatformImplementation"
+      }
+    },
+    {
+      "id": "system-to-primitives",
+      "fromNode": "system-platform",
+      "toNode": "primitives",
+      "label": "implements",
+      "pv": {
+        "edgeType": "PlatformImplementation"
+      }
+    },
+    {
+      "id": "editor-to-graph",
+      "fromNode": "editor",
+      "toNode": "graph-container",
+      "label": "manipulates",
+      "pv": {
+        "edgeType": "DataFlow"
+      }
+    },
+    {
+      "id": "renderer-to-component",
+      "fromNode": "renderer",
+      "toNode": "component-base",
+      "label": "renders",
+      "pv": {
+        "edgeType": "DataFlow"
+      }
+    },
+    {
+      "id": "editor-to-renderer",
+      "fromNode": "editor",
+      "toNode": "renderer",
+      "label": "drives",
+      "pv": {
+        "edgeType": "DataFlow"
+      }
+    },
+    {
+      "id": "boot-to-editor",
+      "fromNode": "boot-system",
+      "toNode": "editor",
+      "label": "initializes",
+      "pv": {
+        "edgeType": "DataFlow"
+      }
+    }
+  ],
+  "pv": {
+    "name": "Unit Visual Programming Architecture",
+    "version": "1.0.0",
+    "edgeTypes": {
+      "GraphComposition": {
+        "style": "solid",
+        "color": "#DDA0DD",
+        "width": 2
+      },
+      "Inheritance": {
+        "style": "double",
+        "color": "#FFB6C1",
+        "width": 2
+      },
+      "DataFlow": {
+        "style": "solid",
+        "color": "#FF6B6B",
+        "width": 2,
+        "animation": {
+          "type": "flow",
+          "duration": 1500
+        }
+      },
+      "PlatformImplementation": {
+        "style": "solid",
+        "color": "#87CEEB",
+        "width": 2
+      }
+    }
+  }
+}
