@@ -20,7 +20,7 @@ nodeComponents:
 
   Functional:
     description: 'Pure functional computation unit'
-    icon: 'λ'
+    icon: 'Λ'
     color: '#96CEB4'
 
   Primitive:

@@ -57,7 +57,7 @@
         "nodeType": "Functional",
         "shape": "rectangle",
         "fill": "#96CEB4",
-        "icon": "λ"
+        "icon": "Λ"
       }
     },
     {
@@ -215,7 +215,9 @@
     {
       "id": "unit-to-graph",
       "fromNode": "unit-base",
+      "fromSide": "bottom",
       "toNode": "graph-container",
+      "toSide": "top",
       "label": "composes",
       "pv": {
         "edgeType": "GraphComposition"
@@ -224,7 +226,9 @@
     {
       "id": "unit-to-component",
       "fromNode": "unit-base",
+      "fromSide": "bottom",
       "toNode": "component-base",
+      "toSide": "top",
       "label": "inherits",
       "pv": {
         "edgeType": "Inheritance"
@@ -233,7 +237,9 @@
     {
       "id": "unit-to-functional",
       "fromNode": "unit-base",
+      "fromSide": "right",
       "toNode": "functional-unit",
+      "toSide": "left",
       "label": "extends",
       "pv": {
         "edgeType": "Inheritance"
@@ -242,7 +248,9 @@
     {
       "id": "registry-to-primitives",
       "fromNode": "registry",
+      "fromSide": "bottom",
       "toNode": "primitives",
+      "toSide": "top",
       "label": "manages",
       "pv": {
         "edgeType": "DataFlow"
@@ -251,7 +259,9 @@
     {
       "id": "boot-to-registry",
       "fromNode": "boot-system",
+      "fromSide": "bottom",
       "toNode": "registry",
+      "toSide": "top",
       "label": "initializes",
       "pv": {
         "edgeType": "DataFlow"
@@ -260,7 +270,9 @@
     {
       "id": "primitives-to-control",
       "fromNode": "primitives",
+      "fromSide": "bottom",
       "toNode": "control-flow",
+      "toSide": "top",
       "label": "includes",
       "pv": {
         "edgeType": "DataFlow"
@@ -269,7 +281,9 @@
     {
       "id": "primitives-to-data",
       "fromNode": "primitives",
+      "fromSide": "bottom",
       "toNode": "data-ops",
+      "toSide": "top",
       "label": "includes",
       "pv": {
         "edgeType": "DataFlow"
@@ -278,7 +292,9 @@
     {
       "id": "primitives-to-arithmetic",
       "fromNode": "primitives",
+      "fromSide": "bottom",
       "toNode": "arithmetic",
+      "toSide": "top",
       "label": "includes",
       "pv": {
         "edgeType": "DataFlow"
@@ -287,7 +303,9 @@
     {
       "id": "web-to-primitives",
       "fromNode": "web-platform",
+      "fromSide": "right",
       "toNode": "primitives",
+      "toSide": "left",
       "label": "implements",
       "pv": {
         "edgeType": "PlatformImplementation"
@@ -296,7 +314,9 @@
     {
       "id": "system-to-primitives",
       "fromNode": "system-platform",
+      "fromSide": "right",
       "toNode": "primitives",
+      "toSide": "left",
       "label": "implements",
       "pv": {
         "edgeType": "PlatformImplementation"
@@ -305,7 +325,9 @@
     {
       "id": "editor-to-graph",
       "fromNode": "editor",
+      "fromSide": "bottom",
       "toNode": "graph-container",
+      "toSide": "top",
       "label": "manipulates",
       "pv": {
         "edgeType": "DataFlow"
@@ -314,7 +336,9 @@
     {
       "id": "renderer-to-component",
       "fromNode": "renderer",
+      "fromSide": "bottom",
       "toNode": "component-base",
+      "toSide": "top",
       "label": "renders",
       "pv": {
         "edgeType": "DataFlow"
@@ -323,7 +347,9 @@
     {
       "id": "editor-to-renderer",
       "fromNode": "editor",
+      "fromSide": "bottom",
       "toNode": "renderer",
+      "toSide": "top",
       "label": "drives",
       "pv": {
         "edgeType": "DataFlow"
@@ -332,7 +358,9 @@
     {
       "id": "boot-to-editor",
       "fromNode": "boot-system",
+      "fromSide": "bottom",
       "toNode": "editor",
+      "toSide": "top",
       "label": "initializes",
       "pv": {
         "edgeType": "DataFlow"
